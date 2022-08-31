@@ -4,3 +4,7 @@ powersurge:{(*/) y#x}
 powerlister:{arg:x;powerlist:{powersurge [x;y]} [arg;]; powerlist each ((til y),y)}
 binomiallister:{y:1%y;binomiallist:{binomial [x;y]} [y;]; binomiallist each ((til x),x)}
 nrootboundedbytwo:{x:x-1;sum ((binomiallister [z;y]) * (powerlister [x;z]))} / X is base, Y is n-root and Z is precision
+ / example:
+show "this is an example of the nrootboundedbytwo function where X is base, Y is n-root and Z is precision"
+nrootboundedbytwo [2;5;50]
+\\
