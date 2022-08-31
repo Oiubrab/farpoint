@@ -20,7 +20,7 @@ show "pairing someone with someone else randomly, using the same list"
 grandmaster:("Magnus Carlson";"Gary Kasparov";"Vishy Anand";"Hikaru Nakamura";"Bobby Fischer")
 grandmaster
 show "simple way: rotate (predictable opponent):"
-simpletable:([] opp1:grandmaster;opp2:(1+rand (count grandmaster)) rotate grandmaster;gametime:09:00:00+(count grandmaster)?06:00:00)
+simpletable:([] opp1:grandmaster;opp2:(1+rand ((count grandmaster)-1)) rotate grandmaster;gametime:09:00:00+(count grandmaster)?06:00:00)
 show simpletable
 show "complex way: random swaps (simpler with symbols):"
 grandmaster:(`MagnusCarlson;`GaryKasparov;`VishyAnand;`HikaruNakamura;`BobbyFischer)
